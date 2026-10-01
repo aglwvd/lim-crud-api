@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async CRUD API Activity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>LIM CRUD API</h1>
+
+    <section class="card">
+      <h2 id="formTitle">Add User</h2>
+      <form id="userForm">
+        <input type="hidden" id="userId">
+        <label>
+          Name
+          <input type="text" id="name" placeholder="Enter name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" placeholder="Enter email" required>
+        </label>
+        <div class="buttons">
+          <button type="submit" id="submitBtn">Add User</button>
+          <button type="button" id="cancelBtn" class="secondary hidden">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <div id="status" class="status hidden"></div>
+    <div id="loading" class="loading hidden">Loading...</div>
+
+    <section class="card">
+      <div class="list-header">
+        <h2>Users</h2>
+        <button id="refreshBtn" class="secondary">Refresh</button>
+      </div>
+      <div id="userList"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
